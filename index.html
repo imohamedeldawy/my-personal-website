@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Aldawy - Personal Website</title>
+    <style>
+        /* CSS داخل ملف HTML */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            text-align: center;
+        }
+        header {
+            background: #0077b6;
+            color: white;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        section {
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 800px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .skills ul {
+            list-style: none;
+            padding: 0;
+        }
+        .skills li {
+            background: #0077b6;
+            color: white;
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        a {
+            color: #0077b6;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background: #0077b6;
+            color: white;
+            font-size: 0.9em;
+        }
+        button {
+            padding: 10px 15px;
+            font-size: 1em;
+            background: #0077b6;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #005f8d;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mohammed Aldawy</h1>
+        <p>Aspiring Cloud Architect | AWS Certified | Content Writer</p>
+    </header>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I'm passionate about cloud computing and solving real-world challenges through innovation. Currently preparing for the AWS Solutions Architect Associate exam.</p>
+        <button onclick="changeBackground()">Change Background</button>
+    </section>
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Cloud Computing (AWS)</li>
+            <li>Cybersecurity</li>
+            <li>DevOps Basics</li>
+            <li>Python</li>
+            <li>Technical Writing</li>
+        </ul>
+    </section>
+    <section class="contact">
+        <h2>Contact</h2>
+        <p>Email: mohammed.aldawy@example.com</p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/mohammedaldawy" target="_blank">linkedin.com/in/mohammedaldawy</a></p>
+    </section>
+    <footer>
+        <p>&copy; 2025 Mohammed Aldawy. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript داخل ملف HTML
+
+        // رسالة ترحيب عند تحميل الصفحة
+        window.onload = function () {
+            alert("Welcome to my personal website!");
+        };
+
+        // تغيير لون الخلفية عند الضغط على الزر
+        function changeBackground() {
+            const colors = ["#f4f4f4", "#dff6ff", "#ffe5b4", "#e0f7fa", "#ffebee"];
+            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        // تأثير عند تمرير الماوس على المهارات
+        document.addEventListener("DOMContentLoaded", function () {
+            const skills = document.querySelectorAll(".skills li");
+
+            skills.forEach(skill => {
+                skill.addEventListener("mouseover", function () {
+                    this.style.transform = "scale(1.1)";
+                    this.style.transition = "0.3s";
+                });
+
+                skill.addEventListener("mouseout", function () {
+                    this.style.transform = "scale(1)";
+                });
+            });
+        });
+    </script>
+</body>
+</html>
