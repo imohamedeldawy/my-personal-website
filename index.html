@@ -5,127 +5,239 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohammed Aldawy - Personal Website</title>
     <style>
-        /* CSS داخل ملف HTML */
+        /* تنسيق الـ CSS للصفحة */
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            background-color: #1a2b2e; /* أسود غامق مع لمسة تركواز */
+            color: #8ECCCC; /* تركواز فاتح كونتراست رئيسي */
             text-align: center;
         }
         header {
-            background: #0077b6;
-            color: white;
+            background: #0d1a1f; /* أسود غامق مع لمسة تركواز */
+            color: #8ECCCC;
             padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #8ECCCC; /* خط تركواز */
         }
         header h1 {
             margin: 0;
             font-size: 2.5em;
+            font-family: 'Georgia', serif;
         }
-        header p {
-            font-size: 1.2em;
+        .header-img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid #8ECCCC;
         }
         section {
             margin: 20px auto;
             padding: 20px;
             max-width: 800px;
-            background: white;
+            background: #2a3d40; /* لون وسيط غامق */
             border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 15px rgba(142, 204, 204, 0.2); /* ظل تركواز خفيف */
         }
-        .skills ul {
+        .skills ul, .soft-skills ul, .languages ul, .articles ul {
             list-style: none;
             padding: 0;
+            text-align: left;
         }
-        .skills li {
-            background: #0077b6;
-            color: white;
-            display: inline-block;
+        .skills li, .soft-skills li, .languages li {
+            background: #0d1a1f;
+            color: #8ECCCC;
             padding: 10px 15px;
-            margin: 5px;
+            margin: 5px 0;
             border-radius: 5px;
-            cursor: pointer;
+            border: 1px solid #8ECCCC;
+        }
+        .skills li ul, .soft-skills li ul {
+            list-style-type: circle;
+            color: #b3dcdc; /* لون أخف للتفاصيل */
+            padding-left: 20px;
         }
         a {
-            color: #0077b6;
+            color: #8ECCCC;
             text-decoration: none;
             font-weight: bold;
         }
         a:hover {
             text-decoration: underline;
+            color: #b3dcdc; /* لون أخف عند التمرير */
         }
         footer {
             margin-top: 20px;
             padding: 10px;
-            background: #0077b6;
-            color: white;
+            background: #0d1a1f;
+            color: #8ECCCC;
             font-size: 0.9em;
+            border-top: 2px solid #8ECCCC;
         }
-        button {
-            padding: 10px 15px;
-            font-size: 1em;
-            background: #0077b6;
-            color: white;
-            border: none;
+        /* قسم المهارات الناعمة */
+        .soft-skills {
+            margin-top: 20px;
+        }
+        /* قسم اللغات */
+        .languages {
+            margin-top: 20px;
+        }
+        /* قسم المقالات */
+        .articles ul {
+            text-align: left;
+        }
+        .articles li {
+            background: #0d1a1f;
+            padding: 10px;
+            margin: 5px 0;
             border-radius: 5px;
-            cursor: pointer;
-        }
-        button:hover {
-            background: #005f8d;
+            border: 1px solid #8ECCCC;
         }
     </style>
 </head>
 <body>
+    <!-- الهيدر مع الاسم على اليسار والصورة على اليمين -->
     <header>
         <h1>Mohammed Aldawy</h1>
-        <p>Aspiring Cloud Architect | AWS Certified | Content Writer</p>
+        <!-- ضع مسار صورتك هنا في src -->
+        <img src="path/to/your-photo.jpg" alt="Mohammed Aldawy" class="header-img">
+        <!-- مثال: <img src="images/myphoto.jpg" alt="Mohammed Aldawy" class="header-img"> -->
     </header>
+
+    <!-- قسم عني -->
     <section class="about">
         <h2>About Me</h2>
-        <p>I'm passionate about cloud computing and solving real-world challenges through innovation. Currently preparing for the AWS Solutions Architect Associate exam.</p>
-        <button onclick="changeBackground()">Change Background</button>
+        <p>
+            I am Mohammed Aldawy, an aspiring Cloud Architect with a strong passion for leveraging technology to solve complex challenges. I am AWS certified and currently preparing for the AWS Solutions Architect Associate exam to deepen my expertise in cloud computing. With a background in cloud security, DevOps basics, and Python programming, I aim to design innovative, secure, and scalable solutions. As a content writer, I enjoy sharing knowledge and insights about technology trends, making complex concepts accessible to everyone.
+        </p>
     </section>
+
+    <!-- قسم المهارات التقنية -->
     <section class="skills">
-        <h2>Skills</h2>
+        <h2>Technical Skills</h2>
         <ul>
-            <li>Cloud Computing (AWS)</li>
-            <li>Cybersecurity</li>
-            <li>DevOps Basics</li>
-            <li>Python</li>
-            <li>Technical Writing</li>
+            <li>Cloud Computing (AWS)
+                <ul>
+                    <li>Designing scalable architectures using EC2, S3, and RDS</li>
+                    <li>Managing cloud infrastructure with IAM and VPC</li>
+                    <li>Implementing serverless solutions with Lambda</li>
+                </ul>
+            </li>
+            <li>Cloud Security
+                <ul>
+                    <li>Securing cloud environments with encryption and access controls</li>
+                    <li>Monitoring threats using AWS CloudTrail and GuardDuty</li>
+                    <li>Ensuring compliance with security best practices</li>
+                </ul>
+            </li>
+            <li>DevOps Basics
+                <ul>
+                    <li>Automating deployments with CI/CD pipelines</li>
+                    <li>Using tools like Docker and Jenkins</li>
+                    <li>Monitoring and logging with CloudWatch</li>
+                </ul>
+            </li>
+            <li>Python
+                <ul>
+                    <li>Writing scripts for automation and cloud management</li>
+                    <li>Building REST APIs with Flask</li>
+                    <li>Data analysis with Pandas and NumPy</li>
+                </ul>
+            </li>
+            <li>Technical Writing
+                <ul>
+                    <li>Creating clear documentation for technical processes</li>
+                    <li>Writing articles on cloud trends and solutions</li>
+                    <li>Explaining complex topics for diverse audiences</li>
+                </ul>
+            </li>
         </ul>
     </section>
+
+    <!-- قسم المهارات الناعمة -->
+    <section class="soft-skills">
+        <h2>Soft Skills</h2>
+        <ul>
+            <li>Communication
+                <ul>
+                    <li>Effectively conveying technical ideas to non-technical stakeholders</li>
+                    <li>Collaborating with teams to achieve common goals</li>
+                </ul>
+            </li>
+            <li>Problem-Solving
+                <ul>
+                    <li>Analyzing complex issues and proposing innovative solutions</li>
+                    <li>Adapting to challenges in dynamic environments</li>
+                </ul>
+            </li>
+            <li>Time Management
+                <ul>
+                    <li>Prioritizing tasks to meet project deadlines</li>
+                    <li>Balancing multiple responsibilities efficiently</li>
+                </ul>
+            </li>
+            <li>Teamwork
+                <ul>
+                    <li>Working collaboratively in cross-functional teams</li>
+                    <li>Supporting colleagues to enhance productivity</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+    <!-- قسم اللغات -->
+    <section class="languages">
+        <h2>Languages</h2>
+        <ul>
+            <li>Arabic: Native</li>
+            <li>English: Advanced</li>
+            <li>German: Intermediate</li>
+        </ul>
+    </section>
+
+    <!-- قسم المقالات -->
+    <section class="articles">
+        <h2>Articles</h2>
+        <ul>
+            <!-- أضف روابط أو عناوين مقالاتك هنا -->
+            <li><a href="path/to/article1" target="_blank">Introduction to AWS Cloud Computing</a> - A beginner's guide to AWS services.</li>
+            <li><a href="path/to/article2" target="_blank">Securing Your Cloud Infrastructure</a> - Best practices for cloud security.</li>
+            <li><a href="path/to/article3" target="_blank">Automating with Python in the Cloud</a> - Practical examples of Python automation.</li>
+            <!-- استبدل path/to/article بمسارات مقالاتك الفعلية -->
+        </ul>
+    </section>
+
+    <!-- قسم التواصل -->
     <section class="contact">
         <h2>Contact</h2>
-        <p>Email: mohammed.aldawy@example.com</p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/mohammedaldawy" target="_blank">linkedin.com/in/mohammedaldawy</a></p>
+        <p>Email: <a href="mailto:imohamedeldawy@gmail.com">imohamedeldawy@gmail.com</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/imohamedeldawy/" target="_blank">linkedin.com/in/imohamedeldawy</a></p>
+        <!-- ضع رابط شهاداتك هنا -->
+        <p>Certificates: <a href="path/to/your-certificates" target="_blank">View My Certificates</a></p>
     </section>
+
     <footer>
-        <p>&copy; 2025 Mohammed Aldawy. All rights reserved.</p>
+        <p>© 2025 Mohammed Aldawy. All rights reserved.</p>
     </footer>
 
     <script>
-        // JavaScript داخل ملف HTML
+        // JavaScript للتحكم في الصفحة
 
         // رسالة ترحيب عند تحميل الصفحة
         window.onload = function () {
-            alert("Welcome to my personal website!");
+            alert("مرحبًا بك في موقعي الشخصي!");
         };
-
-        // تغيير لون الخلفية عند الضغط على الزر
-        function changeBackground() {
-            const colors = ["#f4f4f4", "#dff6ff", "#ffe5b4", "#e0f7fa", "#ffebee"];
-            document.body.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
-        }
 
         // تأثير عند تمرير الماوس على المهارات
         document.addEventListener("DOMContentLoaded", function () {
-            const skills = document.querySelectorAll(".skills li");
+            const skills = document.querySelectorAll(".skills li, .soft-skills li, .languages li");
 
             skills.forEach(skill => {
                 skill.addEventListener("mouseover", function () {
-                    this.style.transform = "scale(1.1)";
+                    this.style.transform = "scale(1.05)";
                     this.style.transition = "0.3s";
                 });
 
